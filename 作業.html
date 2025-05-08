@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-t">
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .headline {
+      font-size: 45px;
+      margin: 10px;
+      font-family: sans-serif;
+    }
+
+    .option-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .hamburger {
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: none;
+    }
+
+    .option-list {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1500px;
+      background: rgb(224, 224, 224);
+      padding: 10px;
+    }
+
+    .option-list p {
+      margin: 10px;
+      color: black;
+    }
+
+    .item {
+      background: linear-gradient(90deg, rgb(171, 161, 218), rgb(65, 65, 78));
+      margin: 10px;
+      width: 280px;
+      flex: none;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    .imger {
+      width: 280px;
+      margin: 10px;
+      transition: all 0.5s ease;
+      animation: fadeln 1s ease-in-out;
+    }
+
+    .imger:hover {
+      transform: scale(1.05);
+    }
+
+    .topnav {
+      background-color: rgb(255, 255, 255);
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .topnav a {
+      background: rgb(59, 59, 59);
+      color: white;
+      padding: 20px 20px;
+      text-decoration: none;
+      text-align: center;
+      margin-right: 10px;
+    }
+
+    .topnav a:hover {
+      text-decoration: underline;
+      background: rgb(112, 112, 112);
+      color: black;
+    }
+
+    @media only screen and (max-width: 950px) {
+      .headline {
+        font-family: "標楷體";
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .option-list {
+        display: none;
+        flex-direction: column;
+      }
+
+      .option-list.active {
+        display: flex;
+      }
+
+      .item {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="headline">這是個反應式網站</div>
+
+  <div class="option-header">
+    <strong></strong>
+    <button class="hamburger" onclick="toggleOptions()">☰</button>
+  </div>
+  <div class="option-list" id="optionList">
+    <p>選項1</p>
+    <p>選項2</p>
+    <p>選項3</p>
+    <p>選項4</p>
+    <p>選項5</p>
+    <p>選項6</p>
+  </div>
+
+  <div class="topnav">
+    <a href="https://www.youtube.com/">YouTube</a>
+  </div>
+
+  <div class="list">
+    <div class="item">作業</div>
+    <div class="item">作業</div>
+    <div class="item">作業</div>
+    <div class="item">紙飛機</div>
+    <div class="item">影片</div>
+  </div>
+
+  <br>
+
+  <div class="list">
+    <img src="https://louis01445.github.io/ffgghh/image.png" class="imger">
+    <img src="https://ask123a.github.io/shark/20250507_104048.webp" class="imger">
+    <img src="https://louis01445.github.io/-/image.png" class="imger">
+    <img src="https://louis01445.github.io/Html-Research/image.png" class="imger">
+    <img src="https://ask123a.github.io/s/1.webp" class="imger">
+    <video controls width="280px" class="imger">
+      <source src="https://louis01445.github.io/-/20250507_103447.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <script>
+    function toggleOptions() {
+      const list = document.getElementById("optionList");
+      list.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
